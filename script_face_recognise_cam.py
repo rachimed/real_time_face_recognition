@@ -60,7 +60,7 @@ class FaceRecognizer:
                     min_distance = dist
                     name_closest_match = name
 
-        if min_distance > 0.5:  # Ajuste le seuil selon vos besoins
+        if min_distance > 0.5:  # Ajuste le seuil selon besoin
             return None
         return name_closest_match
     
@@ -79,9 +79,9 @@ class FaceRecognizer:
             return None
         #     x, y, w, h = detections[0]
         #     face_image = frame[y:y+h, x:x+w]
-        #     return (x, y, w, h), face_image  # Retournez un tuple et l'image du visage
+        #     return (x, y, w, h), face_image  # Retourne un tuple et l'image du visage
         # else:
-        #     return None, None  # Retournez None si aucun visage n'est détecté
+        #     return None, None  # Retourne None si aucun visage n'est détecté
         
     def recognize_from_cam(self):
         video_capture = cv2.VideoCapture(0)
@@ -199,4 +199,4 @@ class FaceRecognizer:
 # Utilisation
 # face_recognizer = FaceRecognizer()
 # face_recognizer.recognize_from_cam()
-# face_recognizer.recognize_image('chemin/vers/image.jpg')
+# face_recognizer.recognize_image('path_image.jpg')
